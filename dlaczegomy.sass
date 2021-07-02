@@ -1,0 +1,560 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: "Montserrat", sans-serif
+
+/*Colors
+$blue : #186ad6
+$meblo-red : #e2001e
+$meblo-gray: #efeded
+/*
+
+.clearfix::after
+    content: ""
+    clear: both
+    display: table
+
+[class*="col-"]
+    float: left
+    min-height: 1px
+    padding: 0px
+
+.container
+    margin: 0 auto
+    max-width: 1200px
+
+.complete
+    display: none
+
+.row
+    &::before, &::after
+        content: ""
+        display: table
+        clear: both
+.complete
+    display: none
+    
+body
+    overflow-x: hidden
+    header
+        height: 100px
+        background: $meblo-gray
+        padding: 10px
+        nav
+            height: 80px
+            .header--logo
+                .header--logo__img
+                    margin-top: 10px
+                    margin-left: 10%
+                    width: 80%
+                    max-width: 230px
+            .bars
+                display: none
+            .header--list
+                height: 80px
+                list-style-type: none
+                text-align: center
+                a
+                    color: #000
+                    text-decoration: none
+                .header--list--items
+                    position: relative
+                    cursor: pointer
+                    line-height: 80px
+                    text-align: center
+                    font-size: 18px
+                    display: inline-block
+                    color: #333
+                    font-weight: bold
+                    cursor: pointer
+                    &:before
+                        content: ""
+                        position: absolute
+                        top: 0
+                        left: 50%
+                        height: 70px
+                        width: 0
+                        border-bottom: 3px solid $meblo-red
+                        transition: 1.2s
+                    &:hover
+                        &:before
+                            left: 10%
+                            width: 80%
+                    i
+                        text-align: center
+                    a
+                        z-index: 30
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 100%
+                        height: 100%
+                    .header--list--offerList
+                        position: absolute
+                        left: 0
+                        top: 100%
+                        width: 150%
+                        display: block
+                        z-index: 10
+                        max-height: 0px
+                        overflow: hidden
+                        border-radius: 20px
+                        background: $meblo-gray
+                        list-style-type: none
+                        .header--offerlist--item
+                            height: 50px
+                            line-height: 35px
+                            font-size: 17px
+                            width: 100%
+                            position: relative
+                            transition: 1s
+                            &:before
+                                content: ""
+                                position: absolute
+                                top: 0
+                                height: 0
+                                z-index: 10
+                                width: 15px
+                                left: 0
+                                background: $meblo-red
+                                transition: 1s
+                            &:hover
+                                &:before
+                                    height: 100%
+                                    
+                    .fas
+                        position: relative
+                        left: 20px
+                        bottom: 5px
+                        font-size: 20px
+                        transition: 1s
+    .whyAsSection
+        padding: 0
+        background: $meblo-gray
+        padding-bottom: 100px
+        background: $meblo-gray
+        background-size: cover
+        background-position: center
+        .whyAs--title
+            opacity: 1
+            padding: 60px 0 40px
+            text-align: center
+            color: $meblo-gray
+            background: url("https://images.pexels.com/photos/326333/pexels-photo-326333.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")
+            h2
+                text-shadow: 0 0 2px #333
+                font-size: 30px
+        .whyAsSection--main
+            padding: 70px 5% 0
+            .padding--box
+                padding: 20px 10px
+                .whyAsSection--main--box
+                    border: 1px solid $meblo-red
+                    border-radius: 10px
+                    background: url("https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")
+                    background-size: cover
+                    background-position: center
+                    text-align: center
+                    height: 500px
+                    box-shadow: 0 0 5px #777
+                    cursor: pointer
+                    transition: 1s
+                    &:hover
+                        transform: scale(1.05)
+                        box-shadow: 0 0 10px #333
+                        z-index: 5
+                        .shadow
+                            background: rgba(0,0,0, .8)
+                    .shadow
+                        padding: 5px
+                        border-radius: 10px
+                        height: 100%
+                        width: 100%
+                        background: rgba(0,0,0, .3)
+                        transition: .8s
+                    .whyAs--box--number
+                        height: 80px
+                        line-height: 80px
+                        margin: 30px 0 10px
+                        p
+                            margin-left: 50%
+                            transform: translateX(-50%)
+                            background: $meblo-red
+                            height: 65px
+                            width: 65px
+                            border-radius: 50%
+                            font-size: 40px
+                            line-height: 65px
+                            color: #fff
+                            font-weight: bold
+                    .whyAs--box--info
+                        color: #fff
+                        h2
+                            font-size: 18px
+                            height: 70px
+                        p
+                            font-size: 18px
+                            line-height: 24px
+                            letter-spacing: 1px
+                .box2
+                    background: url("https://images.pexels.com/photos/1573829/pexels-photo-1573829.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")
+                    background-size: cover
+                    background-position: center
+                .box3
+                    background: url("https://images.pexels.com/photos/276700/pexels-photo-276700.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")
+                    background-size: cover
+                    background-position: center
+                .box4
+                    background: url("https://images.pexels.com/photos/374861/pexels-photo-374861.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")
+                    background-size: cover
+                    background-position: center
+    .tryAs
+        background: $meblo-gray
+        padding: 0px 5% 50px
+        text-align: center
+        h2
+            font-size: 26px
+            font-weight: normal
+            margin-bottom: 50px
+        .tryAs--row
+            display: flex
+            justify-content: space-around
+            padding: 20px 0
+            button
+                position: relative
+                height: 60px
+                width: 250px
+                cursor: pointer
+                border-radius: 30px
+                background: $meblo-red
+                border: none
+                line-height: 60px
+                transition: .7s
+                &:hover
+                    transform: scale(1.05)
+                    box-shadow: 0 0 15px #333
+                    a
+                        transform: scale(1.05)
+                a
+                    text-decoration: none
+                    position: absolute
+                    text-align: center
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    font-size: 20px
+                    font-weight: bold
+                    color: #fff
+                    letter-spacing: 1px
+                    
+    .footer
+        text-align: center
+        height: 330px
+        background: #333
+        color: #fff
+        font-weight: bold
+        position: relative
+        .container
+            .footer--contactAndNav
+                .footer--nav
+                    .footer--nav--item
+                        cursor: pointer
+                        height: 50px
+                        border-right: 4px solid $meblo-red
+                        padding: 0
+                        margin: 10px 0
+                        transition: .3s
+                        &:hover
+                            border-radius: 20px
+                            background: $meblo-red
+                        p
+                            font-size: 16px
+                            line-height: 50px
+                            font-weight: bold
+                .footer--contact
+                    background: $meblo-gray
+                    color: #222
+                    margin: 25px 0 25px
+                    border-radius: 20px
+                    padding: 10px 0
+                    .footer--contact--box
+                        margin: 0 0 10px 0
+                        i
+                            margin: 20px 0
+                            font-size: 25px
+                            color: $meblo-red
+                        p
+                            font-size: 15px
+                            
+            .footer--furnitureNav
+                .furniture--header
+                    cursor: pointer
+                    height: 50px
+                    padding: 0
+                    margin: 10px 0
+                    transition: 0.3s
+                    &:hover
+                        border-radius: 20px
+                        background: $meblo-red
+                    p
+                        font-size: 16px
+                        line-height: 50px
+                        font-weight: bold
+                .footer--furnitureNav--nav
+                    margin-top: 10px
+                    list-style-type: none
+                    padding-left: 15%
+                    .footer--furnitureNav--nav--item
+                        text-align: left
+                        font-size: 15px
+                        padding: 2px 0 2px
+                        cursor: pointer
+                        position: relative
+                        padding-left: 25px
+                        border-radius: 5px
+                        transition: 0.8s
+                        &:before
+                            border-radius: 5px 0 0 5px
+                            content: ""
+                            position: absolute
+                            left: 0
+                            top: 0
+                            height: 0
+                            width: 10px
+                            background: $meblo-red
+                            transition: .8s
+                        &:hover
+                            background: #222
+                            &:before
+                                height: 100%
+        .footer--rights
+            background: $meblo-red
+            height: 50px
+            line-height: 50px
+            color: #fff
+            position: absolute
+            bottom: 0
+            left: 0
+            
+@media (max-width: 1200px)
+    body
+        header 
+            height: 80px
+            nav 
+                .header--list 
+                    .header--list--items
+                        margin-top: 5px
+                        font-size: 16px
+                        line-height: 60px
+                        &:before
+                            height: 50px
+                        .fas 
+                            font-size: 16px
+                        .header--list--offerList
+                            .header--offerlist--item
+                                font-size: 18px
+            
+@media (max-width: 900px)
+    body
+        header 
+            nav 
+                .header--list 
+                    .header--list--items
+                        font-size: 14px
+                        .header--list--offerList
+                            .header--offerlist--item
+                                height: 40px
+                                line-height: 40px
+                                font-size: 14px
+        .footer
+            .container
+                .footer--contactAndNav
+                    .footer--nav
+                        .footer--nav--item
+                            p
+                                font-size: 18px
+                    .footer--contact
+                        .footer--contact--box
+                            p
+                                font-size: 14px
+                .footer--furnitureNav
+                    .furniture--header
+                        p
+                            font-size: 18px
+                    .footer--furnitureNav--nav
+                        padding-left: 5%
+                        .footer--furnitureNav--nav--item
+                            font-size: 14px
+
+@media (min-width: 1030px)
+    body
+        header
+            nav
+                .header--list
+                    height: auto
+                    .dropDown
+                        &:hover
+                            .header--list--offerList
+                                max-height: 500px
+                                transition: 1s
+
+@media (max-width: 750px)
+    body
+        .preloader
+            .preloader__description
+                top: 250px
+                h2
+                    letter-spacing: 3px
+                    font-size: 30px
+        header
+            padding: 0
+            nav
+                padding: 0
+                .header--logo
+                    .header--logo__img
+                        margin-top: 5px
+                .bars
+                    display: block
+                    position: relative
+                    .fa-bars
+                        position: absolute
+                        top: 20px
+                        right: 25%
+                        font-size: 36px
+                        cursor: pointer
+                .header--list
+                    padding: 0
+                    margin: 0
+                    .header--list--items
+                        line-height: 40px
+                        padding: 0
+                        margin: 0
+                        z-index: 10
+                        opacity: 0
+                        background: $meblo-gray
+                        &:before
+                            display: none
+                        .fas
+                            bottom: 2px
+                            font-size: 25px
+                    .dropDown
+                        .header--list--offerList
+                            background: $meblo-red
+                            position: relative
+                            width: 100%
+                            .header--offerlist--item
+                                color: #fff
+                                a
+                                    color: #fff
+        .whyAsSection
+            .whyAs--title
+                h2
+                    margin: 0 20px
+                    font-size: 20px
+            .whyAsSection--main
+                .padding--box
+                    .whyAsSection--main--box
+                        height: 300px
+                        .whyAs--box--number
+                            line-height: 55px
+                            p
+                                font-size: 24px
+                                height: 45px
+                                width: 45px
+                                line-height: 45px
+                                border-radius: 22.5px
+                        .whyAs--box--info
+                            .whyAs--box--info--description--title
+                                height: 30px
+                                font-size: 14px
+                            .whyAs--box--info--description--paragraf
+                                font-size: 12px
+                                line-height: 20px
+        .tryAs 
+            .tryAs--row 
+                button
+                    height: 40px
+                    width: 150px
+                    border-radius: 20px
+                    line-height: 40px
+                    a
+                        font-size: 14px
+        .footer
+            height: 550px
+            .container
+                .footer--contactAndNav
+                    .footer--nav
+                        .footer--nav--item
+                            width: 80%
+                            border-right: none
+                            border-bottom: 3px solid $meblo-red
+                            margin: 5px 10%
+                            height: 40px
+                            p
+                                font-size: 14px
+                                line-height: 40px
+                    .footer--contact
+                        margin: 10px 0
+                        padding: 0 0 5px 0
+                        .footer--contact--box
+                            margin: 0 0 5px 0
+                            i
+                                margin: 15px 0 5px
+                                font-size: 20px
+                            p
+                                font-size: 14px
+                .footer--furnitureNav
+                    .furniture--header 
+                        border-bottom: 3px solid $meblo-red
+                        margin: 5px 10%
+                        width: 80%
+                        p
+                            font-size: 16px
+@media (max-width: 500px)
+    body
+        header
+            nav
+                .header--list
+                    .header--list--items
+                        .header--list--offerList
+                            .header--offerlist--item
+                                height: 30px
+                                line-height: 30px
+                            
+@media (max-width: 330px)
+    body
+        header
+            height: 60px
+            nav
+                .bars
+                    .fa-bars
+                        font-size: 32px
+                        top: 15px
+        .footer
+            height: 620px
+            margin-top: 120px
+            .container
+                .footer--contactAndNav
+                    .footer--contact
+                        .footer--contact--box
+                            i
+                                font-size: 18px
+                            p
+                                font-size: 12px
+                .footer--furnitureNav
+                    .furniture--header 
+                        p
+                            font-size: 14px
+                    .footer--furnitureNav--nav
+                        .footer--furnitureNav--nav--item
+                            font-size: 12px
+                            line-height: 18px
+                            width: 100%
+            .footer--rights
+                height: auto
+                p
+                    line-height: 15px
+                    width: 100%
+                    font-size: 11px

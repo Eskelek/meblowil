@@ -1,0 +1,879 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: "Montserrat", sans-serif
+
+/*Colors
+$blue : #186ad6
+$meblo-red : #e2001e
+$meblo-gray: #efeded
+/*
+
+.clearfix::after
+    content: ""
+    clear: both
+    display: table
+
+[class*="col-"]
+    float: left
+    min-height: 1px
+    padding: 0px
+
+.container
+    margin: 0 auto
+    max-width: 1200px
+
+.complete
+    display: none
+
+.row
+    &::before, &::after
+        content: ""
+        display: table
+        clear: both
+.complete
+    display: none
+    
+body
+    overflow-x: hidden
+    .hideToLoad
+        opacity: 0
+    .preloader
+        z-index: 10
+        position: fixed
+        left: 0
+        top: 0
+        height: 100vh
+        width: 100vw
+        background: url("https://images.pexels.com/photos/312029/pexels-photo-312029.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")
+        filter: brightness(170%)
+        background-position: center
+        background-size: cover
+        animation: comeInSaloon linear 4.5s
+        img
+            width: 700px
+            position: absolute
+            top: 150px
+            left: 50%
+            transform: translateX(-50%)
+            animation: showLogo linear 1s
+        .preloader__description
+            position: relative
+            top: 380px
+            height: auto
+            text-align: center
+            animation: showLogoDesc linear 2s
+            h2
+                font-weight: bold
+                text-shadow: 0 0 2px #fff
+                font-size: 45px
+                letter-spacing: 8px
+                &:first-of-type
+                    text-shadow: none
+                    color: $meblo-red
+    .underLook
+        position: fixed
+        top: 0px
+        left: 0
+        padding: 0
+        z-index: -1
+        height: 100vh
+        background: url("https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")
+        background-size: cover
+        background-position: bottom
+    header
+        height: 90vh
+        padding: 10px
+        background: url("https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+        background-position: center
+        filter: brightness(130%)
+        background-size: cover
+        font-size: 0
+        nav
+            position: relative
+            height: 80px
+            background: rgba(255,255,255, .9)
+            .bars
+                display: none
+            .header--list
+                height: 80px
+                list-style-type: none
+                text-align: center
+                padding: 0 5% 0 3%
+                a
+                    color: #000
+                    text-decoration: none
+                .header--list--contact
+                    height: 80px
+                    line-height: 80px
+                    font-size: 18px
+                    display: inline-block
+                    color: #333
+                    font-weight: 600
+                    padding: 0 30px
+                    transition: .7s
+                    &:hover
+                        background: #fff
+                    i
+                        font-size: 20px
+                        padding: 0 10px
+                        color: $meblo-red
+                    span
+                        color: $meblo-red
+                        font-weight: bold
+                .header--list--items
+                    float: right
+                    position: relative
+                    line-height: 80px
+                    height: 80px
+                    text-align: center
+                    font-size: 18px
+                    display: inline-block
+                    color: #333
+                    font-weight: bold
+                    cursor: pointer
+                    min-width: 200px
+                    border-radius: 5px
+                    transition: .7s
+                    &:before
+                        content: ""
+                        position: absolute
+                        top: 0
+                        left: 50%
+                        height: 70px
+                        width: 0
+                        border-bottom: 3px solid $meblo-red
+                        transition: 1.2s
+                    &:hover
+                        background: #fff
+                        &:before
+                            left: 10%
+                            width: 80%
+                    i
+                        padding-left: 10px
+                        transform: translateY(-3px)
+                        text-align: center
+                    a
+                        z-index: 30
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 100%
+                        height: 100%
+                        
+            .header--list--offerList
+                height: auto
+                font-size: 0
+                list-style-type: none
+                background: rgba(255,255,255, .9)
+                text-align: right
+                padding-right: 6%
+                overflow: hidden
+                height: 0px
+                opacity: 0
+                .header--offerlist--item
+                    display: inline-block
+                    margin: 0
+                    border-radius: 5px
+                    a
+                        cursor: pointer
+                        position: relative
+                        font-weight: 600
+                        padding: 20px 30px
+                        font-size: 20px
+                        color: #333
+                        display: block
+                        height: 100%
+                        text-decoration: none
+                        transition: .7s
+                        &:before
+                            content: ""
+                            position: absolute
+                            top: 0
+                            left: 50%
+                            height: 50px
+                            width: 0
+                            border-bottom: 1px solid $meblo-red
+                            transition: .7s
+                        &:hover
+                            background: #fff
+                            &:before
+                                left: 10%
+                                width: 80%
+        .header--logo
+            position: relative
+            top: 20%
+            left: 5%
+            img
+                width: 35%
+                height: auto
+            h1
+                color: #fff
+                text-shadow: 0 0 10px #333
+                font-size: 60px
+                letter-spacing: 5px
+                line-height: 140px
+                font-weight: lighter
+    .whyAsSection
+        padding: 0
+        background: $meblo-gray
+        padding-bottom: 100px
+        .whyAs--title
+            opacity: 1
+            font-size: 36px
+            margin: 60px 0 40px
+            text-align: center
+        .whyAs--box
+            padding: 0
+            height: 300px
+            .whyAs--box--img
+                margin-top: 25px
+                height: 250px
+            .whyAs--box--img__1
+                background: url("https://images.pexels.com/photos/982657/pexels-photo-982657.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")
+                background-position: center
+                background-size: cover
+                border-radius: 0 20px 20px 0
+            .whyAs--box--img__2
+                background: url("https://images.pexels.com/photos/1573829/pexels-photo-1573829.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")
+                background-position: center
+                background-size: cover
+                border-radius: 20px 0 0 20px
+            .whyAs--box--img__3
+                background: url("https://images.pexels.com/photos/276700/pexels-photo-276700.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")
+                background-position: center
+                background-size: cover
+                border-radius: 0 20px 20px 0
+            .whyAs--box--img__4
+                background: url("https://images.pexels.com/photos/374861/pexels-photo-374861.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")
+                background-position: center
+                background-size: cover
+                border-radius: 20px 0 0 20px
+            .whyAs--box--info
+                .whyAs--box--info--number
+                    display: flex
+                    justify-content: center
+                    p
+                        margin-top: 20%
+                        height: 70px
+                        width: 70px
+                        background: $meblo-red
+                        border-radius: 50%
+                        font-size: 40px
+                        text-align: center
+                        color: #fff
+                        line-height: 70px
+                        font-weight: bold
+                .whyAs--box--info--description
+                    padding-top: 10px
+                    .whyAs--box--info--description--title
+                        font-size: 30px
+                        letter-spacing: 2px
+                        margin: 20px 0
+                    .whyAs--box--info--description--paragraf
+                        font-size: 17px
+                        letter-spacing: 1px
+    .clearView
+        background: transparent
+        height: 200px
+    .aboutAs
+        position: relative
+        height: auto
+        background: transparent
+        text-align: left
+        .aboutAs--description
+            background: $meblo-gray
+            padding: 0px 20px 40px 70px 
+            border-radius: 0 20px 20px 0px
+            h1
+                font-size: 35px
+                letter-spacing: 2px
+                text-decoration: underline $meblo-red
+                margin: 45px 0 5px 0
+            p
+                margin-top: 30px
+                font-size: 20px
+                line-height: 30px
+                letter-spacing: 1px
+            button
+                margin-top: 20px
+                cursor: pointer
+                font-size: 24px
+                height: 50px
+                width: 220px
+                border-radius: 10px
+                border: none
+                line-height: 48px
+                color: #fff
+                background: $meblo-red
+                font-weight: bold
+                transition: .4s
+                a
+                    text-decoration: none
+                    color: #fff
+                    display: block
+                &:hover
+                    width: 223px
+                    box-shadow: 0 0 20px rgba(0,0,0, .3)
+                        
+        .aboutAs--clearView
+            background: transparent
+            
+    .contact
+        .contact--box
+            padding: 0
+            border-radius: 20px 0 0 20px
+            background: $meblo-gray
+            .contact--box--form
+                padding: 8px
+                text-align: center
+                height: auto
+                background: $meblo-gray
+                border-radius: 20px
+                h2
+                    text-decoration: underline $meblo-red
+                    font-size: 30px
+                    margin: 0 0 15px
+                input
+                    margin: 10px 0
+                    padding: 10px
+                    border-radius: 5px
+                    border: none
+                .message
+                    padding: 10px
+                    border: none
+                    margin: 10px 0
+                    border-radius: 5px
+                    height: 150px
+                .submit
+                    background: $meblo-red
+                    font-weight: bold
+                    font-size: 18px
+                    color: #fff
+                    cursor: pointer
+                    transition: .5s
+                    &:hover
+                        transform: scale(1.03)
+            .contact--box--map
+                box-shadow: 0 0 10px #333
+                background: #333
+                padding: 15px
+                border-radius: 20px 0 0 20px
+                iframe
+                    height: 350px
+            
+    .footer
+        text-align: center
+        height: 330px
+        background: #333
+        color: #fff
+        font-weight: bold
+        position: relative
+        margin-top: 150px
+        .container
+            .footer--contactAndNav
+                .footer--nav
+                    .footer--nav--item
+                        cursor: pointer
+                        height: 50px
+                        border-right: 4px solid $meblo-red
+                        padding: 0
+                        margin: 10px 0
+                        transition: .3s
+                        &:hover
+                            border-radius: 20px
+                            background: $meblo-red
+                        p
+                            font-size: 16px
+                            line-height: 50px
+                            font-weight: bold
+                            a
+                                color: #fff
+                                text-decoration: none
+                                display: block
+                .footer--contact
+                    background: $meblo-gray
+                    color: #222
+                    margin: 25px 0 25px
+                    border-radius: 20px
+                    padding: 10px 0
+                    .footer--contact--box
+                        margin: 0 0 10px 0
+                        i
+                            margin: 20px 0
+                            font-size: 25px
+                            color: $meblo-red
+                        p
+                            font-size: 15px
+                            
+            .footer--furnitureNav
+                .furniture--header
+                    cursor: pointer
+                    height: 50px
+                    padding: 0
+                    margin: 10px 0
+                    transition: 0.3s
+                    &:hover
+                        border-radius: 20px
+                        background: $meblo-red
+                    p
+                        font-size: 16px
+                        line-height: 50px
+                        font-weight: bold
+                .footer--furnitureNav--nav
+                    margin-top: 10px
+                    list-style-type: none
+                    padding-left: 15%
+                    .footer--furnitureNav--nav--item
+                        text-align: left
+                        font-size: 15px
+                        padding: 2px 0 2px
+                        cursor: pointer
+                        position: relative
+                        padding-left: 25px
+                        border-radius: 5px
+                        transition: 0.8s
+                        &:before
+                            border-radius: 5px 0 0 5px
+                            content: ""
+                            position: absolute
+                            left: 0
+                            top: 0
+                            height: 0
+                            width: 10px
+                            background: $meblo-red
+                            transition: .8s
+                        &:hover
+                            background: #222
+                            &:before
+                                height: 100%
+                        a
+                            color: #fff
+                            text-decoration: none
+                            display: block
+        .footer--rights
+            background: $meblo-red
+            height: 50px
+            line-height: 50px
+            color: #fff
+            position: absolute
+            bottom: 0
+            left: 0
+                    
+@media (max-width: 1600px)
+    body
+        header
+            nav
+                .header--list
+                    .header--list--contact
+                        font-size: 13px
+                        padding: 0 10px
+                        i
+                            padding: 0 5px
+                            font-size: 16px
+                    .header--list--items
+                        font-size: 16px
+                        min-width: 180px
+            .header--logo
+                h1
+                    font-size: 45px
+                    line-height: 65px
+@media (max-width: 1200px)
+    body
+        header 
+            .header--logo
+                h1
+                    font-size: 28px
+                    line-height: 55px
+            nav 
+                .header--list 
+                    .header--list--contact
+                        font-size: 11px
+                        i
+                            font-size: 12px
+                    .header--list--items
+                        font-size: 14px
+                        min-width: 110px
+                .header--list--offerList
+                    height: 55px
+                    .header--offerlist--item
+                        a
+                            font-size: 14px
+                            padding: 16px 
+                        
+        .whyAsSection 
+            padding-bottom: 50px
+            .whyAs--title
+                font-size: 35px
+            .whyAs--box
+                .whyAs--box--info
+                    .whyAs--box--info--number 
+                        p
+                            line-height: 50px
+                            font-size: 30px
+                            margin-top: 30%
+                            height: 50px
+                            width: 50px
+                    .whyAs--box--info--description
+                        .whyAs--box--info--description--title
+                            font-size: 25px
+                            margin: 15px 0
+                        .whyAs--box--info--description--paragraf
+                            font-size: 16px
+        .clearView
+            height: 150px
+        .aboutAs
+            .aboutAs--description
+                p
+                    font-size: 16px
+                    letter-spacing: 0px
+        .contact 
+            .contact--box 
+                .contact--box--form 
+                    h2
+                        font-size: 22px
+                    input
+                        font-size: 15px
+                    .formMessage
+                        .submit
+                            font-size: 16px
+        footer
+            margin-top: 150px
+            
+
+            
+@media (max-width: 900px)
+    body
+        .preloader
+            img
+                top: 50px
+                width: 80%
+            .preloader__description
+                top: 250px
+                h2
+                    letter-spacing: 5px
+                    font-size: 35px
+        header 
+            .header--logo
+                text-align: center
+                h1
+                    margin-top: 30px
+                    font-size: 20px
+                    line-height: 40px
+            nav 
+                .header--list 
+                    .header--list--contact
+                        font-size: 10px
+                        padding: 0 5px
+                        i
+                            font-size: 10px
+                    .header--list--items
+                        font-size: 12px
+                        min-width: 90px
+                .header--list--offerList
+                    height: 55px
+                    .header--offerlist--item
+                        a
+                            font-size: 12px
+                            padding: 10px
+                            &:before
+                                height: 30px
+        .whyAsSection 
+            .whyAs--title
+                font-size: 30px
+            .whyAs--box
+                .whyAs--box--info
+                    .whyAs--box--info--number 
+                        p
+                            line-height: 45px
+                            font-size: 25px
+                            margin-top: 50%
+                            height: 45px
+                            width: 45px
+                    .whyAs--box--info--description
+                        .whyAs--box--info--description--title
+                            font-size: 20px
+        .footer
+            .container
+                .footer--contactAndNav
+                    .footer--nav
+                        .footer--nav--item
+                            p
+                                font-size: 18px
+                    .footer--contact
+                        .footer--contact--box
+                            p
+                                font-size: 14px
+                .footer--furnitureNav
+                    .furniture--header
+                        p
+                            font-size: 18px
+                    .footer--furnitureNav--nav
+                        padding-left: 5%
+                        .footer--furnitureNav--nav--item
+                            font-size: 14px
+@media (max-width: 750px)
+    body
+        .preloader
+            .preloader__description
+                top: 250px
+                h2
+                    letter-spacing: 3px
+                    font-size: 30px
+        header
+            padding: 0
+            .header--logo
+                top: 20%
+                img
+                    width: 70%
+                h1
+                    margin-top: 30px
+                    font-size: 16px
+                    font-weight: bold
+                    line-height: 25px
+            nav
+                background: #fff
+                padding: 0
+                height: 50px
+                z-index: 100
+                position: absolute
+                top: 0
+                left: 0
+                .header--logo
+                    .header--logo__img
+                        margin-top: 5px
+                .bars
+                    display: block
+                    position: relative
+                    line-height: 60px
+                    p
+                        display: inline-block
+                        font-size: 12px
+                        padding-left: 10px
+                        font-weight: bold
+                        i
+                            font-size: 14px
+                            color: $meblo-red
+                    .fa-bars
+                        position: absolute
+                        top: 10px
+                        right: 35px
+                        font-size: 33px
+                        cursor: pointer
+                .header--list 
+                    height: 0px
+                    overflow: hidden
+                    .header--list--contact
+                        display: none
+                    .header--list--items
+                        line-height: 40px
+                        height: 40px
+                        font-size: 16px
+                        &:before
+                            border: none
+                .header--list--offerList
+                    height: 0px
+                    padding: 0
+                    .header--offerlist--item
+                        display: block
+                        text-align: center
+                        height: auto
+                        a
+                            font-size: 16px
+                            padding: 10px
+                            &:before
+                                display: none
+        .whyAsSection 
+            .whyAs--title
+                margin: 25px 0
+                font-size: 22px
+            .whyAs--box
+                position: relative
+                .whyAs--box--img
+                    border-radius: 20px
+                .whyAs--box--info
+                    border-radius: 20px
+                    position: absolute
+                    top: 25px
+                    left: 0
+                    height: 250px
+                    z-index: 3
+                    background: rgba(255,255,255, .7)
+                    .whyAs--box--info--number 
+                        p
+                            line-height: 45px
+                            font-size: 25px
+                            margin-top: 50%
+                            height: 45px
+                            width: 45px
+                    .whyAs--box--info--description
+                        padding: 0
+                        .whyAs--box--info--description--title
+                            font-size: 18px
+        .aboutAs
+            .aboutAs--description
+                border-radius: 0
+                padding: 10px
+                h1
+                    font-size: 25px
+                    margin: 10px 0 0
+                p
+                    font-size: 16px
+                button
+                    font-size: 18px
+                    height: 40px
+                    line-height: 40px
+                    width: 170px
+        .contact
+            .contact--box
+                .contact--box--form
+                    border-radius: 0
+                    h2
+                        font-size: 18px
+                        margin: 0 0 10px
+                    .formdata
+                        input
+                            font-size: 14px
+                            padding: 5px
+                            margin: 5px
+                    .formMessage
+                        .message
+                            margin: 5px
+                        .submit
+                            width: 90%
+                            margin: 10px 5%
+                .contact--box--map
+                    border-radius: 20px
+        .footer
+            height: 550px
+            margin-top: 150px
+            .container
+                .footer--contactAndNav
+                    .footer--nav
+                        .footer--nav--item
+                            width: 80%
+                            border-right: none
+                            border-bottom: 3px solid $meblo-red
+                            margin: 5px 10%
+                            height: 40px
+                            p
+                                font-size: 14px
+                                line-height: 40px
+                    .footer--contact
+                        margin: 10px 0
+                        padding: 0 0 5px 0
+                        .footer--contact--box
+                            margin: 0 0 5px 0
+                            i
+                                margin: 15px 0 5px
+                                font-size: 20px
+                            p
+                                font-size: 14px
+                .footer--furnitureNav
+                    .furniture--header 
+                        border-bottom: 3px solid $meblo-red
+                        margin: 5px 10%
+                        width: 80%
+                        p
+                            font-size: 16px
+@media (max-width: 500px)
+    body
+        .preloader
+            .preloader__description
+                top: 200px
+                h2
+                    letter-spacing: 1px
+                    font-size: 26px
+                            
+@media (max-width: 330px)
+    body
+        .preloader
+            .preloader__description
+                top: 150px
+                h2
+                    letter-spacing: 0px
+                    font-size: 20px
+        header
+            height: 60vh
+            nav
+                .bars
+                    .fa-bars
+                        font-size: 32px
+                        top: 15px
+        .whyAsSection 
+            .whyAs--title
+                margin: 15px 5px 0
+                font-size: 16px
+            .whyAs--box
+                .whyAs--box--info
+                    height: 250px
+                    z-index: 3
+                    background: rgba(255,255,255, .7)
+                    .whyAs--box--info--number 
+                        p
+                            line-height: 35px
+                            font-size: 18px
+                            height: 35px
+                            width: 35px
+                    .whyAs--box--info--description
+                        .whyAs--box--info--description--title
+                            font-size: 5vw
+                            margin: 10px 4px 10px 0
+                        .whyAs--box--info--description--paragraf
+                            margin-right: 4px
+                            font-size: 5vw
+        .aboutAs
+            .aboutAs--description
+                border-radius: 0
+                padding: 5px
+                h1
+                    font-size: 18px
+                    margin: 7px 0 0
+                p
+                    margin-top: 15px
+                    font-size: 12px
+                    line-height: 18px
+                button
+                    margin-left: 50%
+                    transform: translateX(-50%)
+                    font-size: 16px
+                    height: 30px
+                    line-height: 30px
+                    width: 150px
+        .contact
+            .contact--box
+                .contact--box--map
+                    padding: 7px
+                    border-radius: 20px
+                    iframe
+                        height: 250px
+        
+        .footer
+            height: 620px
+            margin-top: 120px
+            .container
+                .footer--contactAndNav
+                    .footer--contact
+                        .footer--contact--box
+                            i
+                                font-size: 18px
+                            p
+                                font-size: 12px
+                .footer--furnitureNav
+                    .furniture--header 
+                        p
+                            font-size: 14px
+                    .footer--furnitureNav--nav
+                        .footer--furnitureNav--nav--item
+                            font-size: 12px
+                            line-height: 18px
+                            width: 100%
+            .footer--rights
+                height: auto
+                p
+                    line-height: 15px
+                    width: 100%
+                    font-size: 11px
+                    
+                            
